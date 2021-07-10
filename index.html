@@ -5,24 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>角度当て</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+    .line {
+        display: table;
+        width: 40%;
+        height: 2px;
+        transform:rotate(-20deg);
+        margin-top: 10vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    
+
+    .horizontal{
+        display: table;
+        width: 40%;
+        height: 2px;
+        transform:rotate(0deg);
+        margin-top: 10vw;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .parent {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3em;
+    }
+    </style>
+
 </head>
 <body>
     
-    <h1 style="text-align: center; font-size: 2em; margin-bottom: 5em;">角度を当てろ</h1>
+    <h1 style="text-align: center; font-size: 2em; margin-bottom: 3em;">角度を当てろ</h1>
 
 
     <div class="parent">
-        <div class="triangle01"></div>
-        <div class="triangle0"></div>
+        <img src="RedLine.png" id="li" class="line">
+        <img src="RedLine.png" class="horizontal">
 
-        <form>
-            <div class="fo">
-                <input type="number">
-                <span class="text-input__validator"></span>
-                <button type="button">決定</button>
-            </div>
-        </form>
+        
+    <form>
+        <div class="fo">
+            <input type="number" id="ans">
+            <button type="button" onclick="answer()">決定</button>
+        </div>
+    </form>
     </div>
+
+
+    <!-- <p id="angle"></p> -->
+    <h2 id="hantei"></h2>
+    <p id="seikai"></p>
+    <script src="program.js"></script>
 </body>
 </html>
