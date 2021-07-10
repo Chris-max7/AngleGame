@@ -17,7 +17,7 @@ function answer(){
         document.getElementById('hantei').innerHTML = "なに！？正解だと！！<br>あなたは神の目の持ち主です。";
     }else if(between(value, angle-5,angle+5)){
         document.getElementById('hantei').innerText = "惜しい！！";
-        document.getElementById('seikai').innerText = "正解：" + angle + '°す';
+        document.getElementById('seikai').innerText = "正解：" + angle + '°';
     }
     else{
         document.getElementById('hantei').innerText = "全然違うしwww";
