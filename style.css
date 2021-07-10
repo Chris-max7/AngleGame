@@ -2,7 +2,7 @@
     .line {
         display: table;
         width: 40%;
-        height: 2px;
+        height: 1px;
         transform:rotate(-20deg);
         margin-top: 10vw;
         position: absolute;
@@ -15,7 +15,7 @@
     .horizontal{
         display: table;
         width: 40%;
-        height: 2px;
+        height: 1px;
         transform:rotate(0deg);
         margin-top: 10vw;
         position: absolute;
