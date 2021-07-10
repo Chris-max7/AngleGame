@@ -1,18 +1,24 @@
 var elem = document.getElementById("li");
 var angle;
+const button = document.getElementById('btn');
 
 set()
 
 function set(){
+    button.disabled = false
     angle = getRandomInt(1,180);
     elem.style.transform = 'rotate(-' + angle + 'deg)';
     document.getElementById('angle').innerText = angle;
+
+
 }
 
 function answer(){
-    const textbox = document.getElementById('ans')
+    const textbox = document.getElementById('ans');
     const value = textbox.value; 
-    
+
+
+    button.disabled = true
     if(value == angle){
         document.getElementById('hantei').innerHTML = "なに！？正解だと！！<br>あなたは神の目の持ち主です。";
     }else if(between(value, angle-5,angle+5)){
@@ -25,6 +31,15 @@ function answer(){
     }
 }
 
+function reload(){
+
+    document.getElementById('hantei').innerText = "";
+    document.getElementById('seikai').innerText = "";
+    document.getElementById('ans').value = "";
+
+    set();
+
+}
 
 
 function getRandomInt(min, max) {
